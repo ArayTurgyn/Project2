@@ -1,27 +1,61 @@
-# ProjectTwo
+# Zone.js
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+[![Build Status](https://travis-ci.org/angular/zone.js.png)](https://travis-ci.org/angular/zone.js)
+[![CDNJS](https://img.shields.io/cdnjs/v/zone.js.svg)](https://cdnjs.com/libraries/zone.js)
 
-## Development server
+Implements _Zones_ for JavaScript, inspired by [Dart](https://www.dartlang.org/articles/zones/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> If you're using zone.js via unpkg (i.e. using `https://unpkg.com/zone.js`)
+> and you're using any of the following libraries, make sure you import them first 
 
-## Code scaffolding
+> * 'newrelic' as it patches global.Promise before zone.js does
+> * 'async-listener' as it patches global.setTimeout, global.setInterval before zone.js does
+> * 'continuation-local-storage' as it uses async-listener
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# NEW Zone.js POST-v0.6.0
 
-## Build
+See the new API [here](./dist/zone.js.d.ts).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Read up on [Zone Primer](https://docs.google.com/document/d/1F5Ug0jcrm031vhSMJEOgp1l-Is-Vf0UCNDY-LsQtAIY).
 
-## Running unit tests
+## What's a Zone?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A Zone is an execution context that persists across async tasks.
+You can think of it as [thread-local storage](http://en.wikipedia.org/wiki/Thread-local_storage) for JavaScript VMs.
 
-## Running end-to-end tests
+See this video from ng-conf 2014 for a detailed explanation:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+[![screenshot of the zone.js presentation and ng-conf 2014](/presentation.png)](//www.youtube.com/watch?v=3IqtmUscE_U)
 
-## Further help
+## See also
+* [async-listener](https://github.com/othiym23/async-listener) - a similar library for node
+* [Async stack traces in Chrome](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
+* [strongloop/zone](https://github.com/strongloop/zone) (Deprecated)
+* [vizone](https://github.com/gilbox/vizone) - control flow visualizer that uses zone.js
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Standard API support
+
+zone.js patched most standard web APIs (such as DOM events, `XMLHttpRequest`, ...) and nodejs APIs
+(`EventEmitter`, `fs`, ...), for more details, please see [STANDARD-APIS.md](STANDARD-APIS.md).
+
+## Nonstandard API support
+
+We are adding support to some nonstandard APIs, such as MediaQuery and
+Notification. Please see [NON-STANDARD-APIS.md](NON-STANDARD-APIS.md) for more details.
+
+## Examples
+
+You can find some samples to describe how to use zone.js in [SAMPLE.md](SAMPLE.md).
+
+## Modules
+
+zone.js patches the async APIs described above, but those patches will have some overhead.
+Starting from zone.js v0.8.9, you can choose which web API module you want to patch.
+For more details, please
+see [MODULE.md](MODULE.md).
+
+## Promise A+ test passed
+[![Promises/A+ 1.1 compliant](https://promisesaplus.com/assets/logo-small.png)](https://promisesaplus.com/)
+
+## License
+MIT
