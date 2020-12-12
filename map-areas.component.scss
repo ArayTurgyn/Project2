@@ -1,0 +1,73 @@
+.main {
+  margin: 100px 116px 0;
+}
+
+.region {
+  display: flex;
+  margin: 0 0 80px;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  &-central {
+    width: 648px;
+    height: 496px;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 24px 0;
+
+  &-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+  }
+
+  &-text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin: 0 0 64px;
+  }
+}
+
+.tours {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 204px;
+  height: 40px;
+  background: #354D62;
+  border-radius: 5px;
+  outline: 0;
+  border: none;
+  color: #FFFFFF;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #446397;
+  }
+}
+
+.catalog {
+  display: flex;
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
+  &-main {
+
+  }
+
+  &-secondary {
+    &__img {
+      margin: 0 0 -8px;
+    }
+  }
+}

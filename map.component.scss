@@ -1,0 +1,43 @@
+.map {
+  position: relative;
+  &-img {
+    width: 100%;
+  }
+
+  &-north{
+    position: absolute;
+    width: 482px;
+    height: 145px;
+    top: 100px;
+    right: 405px;
+    cursor: pointer;
+  }
+
+  &-south {
+    position: absolute;
+    width: 515px;
+    height: 160px;
+    bottom: 75px;
+    right: 355px;
+    cursor: pointer;
+  }
+
+  &-west {
+    position: absolute;
+    width: 300px;
+    height: 368px;
+    bottom: 95px;
+    left: 170px;
+    cursor: pointer;
+  }
+
+  &-east {
+    position: absolute;
+    width: 270px;
+    height: 185px;
+    top: 256px;
+    right: 170px;
+    cursor: pointer;
+  }
+}
+

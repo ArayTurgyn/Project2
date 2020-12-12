@@ -1,0 +1,50 @@
+<main class="header">
+  <section class="header-left">
+
+    <ul class="header-navigation">
+      <img class="header-navigation-logo" src="assets/logo.svg" alt="">
+      <li class="navigation-header-routes__item"
+          routerLinkActive="navigation-header-routes__item--active"
+          [routerLinkActiveOptions]="{exact: true}"
+          [routerLink]="['']">
+          <span class="nav-text">Главная</span>
+      </li>
+      <li class="navigation-header-routes__item"
+          routerLinkActive="navigation-header-routes__item--active"
+          [routerLink]="['/tours']"
+      >
+        <span class="nav-text">Туры</span>
+      </li>
+      <li class="navigation-header-routes__item"
+          [routerLink]="['/company']"
+      >
+        <span class="nav-text">Компании</span>
+      </li>
+      <li class="navigation-header-routes__item"
+      [routerLink]="['/about']">
+        <span class="nav-text">О нас</span>
+      </li>
+    </ul>
+
+  </section>
+
+  <section class="header-right">
+    <div class="search">
+      <label class="search-bar">
+        <input
+          class="search-bar__input"
+          placeholder="Поиск"
+        />
+        <img class="search-bar__img" src="assets/search.svg" alt="">
+      </label>
+    </div>
+
+    <button class="search-btn">
+      Искать
+    </button>
+
+    <button class="lang-btn">
+      ru
+    </button>
+  </section>
+</main>

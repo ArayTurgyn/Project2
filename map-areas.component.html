@@ -1,0 +1,85 @@
+<main class="main">
+  <section class="region">
+    <img class="region-central" src="assets/Central-Asia.svg" alt="">
+
+    <div class="block" id="east">
+      <h1 class="block-title">Восточно-Казахстанская область</h1>
+      <p class="block-text">
+        Целебные воды Алаколя, пантовые ванны в горах Алтая, безусловно, укрепят здоровье, а путешествие к мистической горе Белухе заставит задуматься о вечном
+      </p>
+
+      <button class="tours">
+        Посмотеть все туры
+      </button>
+    </div>
+  </section>
+
+  <section class="region" [class.reverse]="!reverse">
+    <img class="region-central" src="assets/west-Kazakhstan.svg" alt="">
+
+    <div class="block" id="west">
+      <h1 class="block-title">Западно-Казахстанская область</h1>
+      <p class="block-text">
+        Область знаменита выдающимися личностями, в разное время изменившими своими яркими судьбами ход истории.
+        Обязательно побывайте в местах с ними связанными! Это и музейный комплекс «Букеевская орда», и усадьба Емельяна Пугачева, и дом-музей Маншук Маметовой
+      </p>
+
+      <button class="tours">
+        Посмотеть все туры
+      </button>
+    </div>
+  </section>
+
+  <section class="region">
+    <img class="region-central" src="assets/south-Kazakhstan.svg" alt="">
+
+    <div class="block" id="south">
+      <h1 class="block-title">Южно-Казахстанская область</h1>
+      <p class="block-text">
+        Центром туристского интереса признан город Туркестан, близ которого сосредоточено множество достопримечательностей древности и руины городов.
+        Также туристов привлекает активный отдых на природе и оздоровительные процедуры на курортах региона
+      </p>
+
+      <button class="tours">
+        Посмотеть все туры
+      </button>
+    </div>
+  </section>
+
+  <section class="region" [class.reverse]="!reverse">
+    <img class="region-central" src="assets/north-Kazakhstan.svg" alt="">
+
+    <div class="block" id="north">
+      <h1 class="block-title">Северо-Казахстанская область</h1>
+      <p class="block-text">
+        Главной достопримечательностью области по праву являются живописные озера Имантау и Шалкар, окруженные хвойным лесом и гранитным мелкосопочником
+      </p>
+
+      <button class="tours">
+        Посмотеть все туры
+      </button>
+    </div>
+  </section>
+
+  <section class="catalog">
+    <span class="catalog-main">
+      <img class="catalog-main__img" src="assets/yurt.svg" alt="">
+    </span>
+
+    <span class="catalog-secondary">
+      <img class="catalog-secondary__img" src="assets/Bao.svg" alt="">
+      <img class="catalog-secondary__img" src="assets/Almaty.svg" alt="">
+    </span>
+  </section>
+
+  <section class="catalog" [class.reverse]="!reverse">
+    <span class="catalog-main">
+      <img class="catalog-main__img" src="assets/nature.svg" alt="">
+    </span>
+
+    <span class="catalog-secondary">
+      <img class="catalog-secondary__img" src="assets/Charyn.svg" alt="">
+      <img class="catalog-secondary__img" src="assets/lake.svg" alt="">
+    </span>
+  </section>
+</main>
